@@ -1,6 +1,5 @@
-import type { Nft } from 'alchemy-sdk';
-
 import Card from '~/components/common/Card';
+import { Nft } from '~/lib/alchemy';
 
 export const NFTCard = ({ nft }: { nft: Nft }) => {
 	return (

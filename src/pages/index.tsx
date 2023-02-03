@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import { dehydrate, QueryClient } from '@tanstack/react-query';
-import type { Nft } from 'alchemy-sdk';
 
 import Card from '~/components/common/Card';
 import { NFTCard } from '~/components/nfts/NftCard';
+import NftFilter from '~/components/nfts/NftFilter';
 import NftGalleryList from '~/components/nfts/NftGalleryList';
+import useDebounce from '~/hooks/useDebounce';
 import useNftGallery from '~/hooks/useNftGallery';
-import { AlchemyApiArgs, getBaycNfts } from '~/lib/alchemy';
+import { AlchemyApiArgs, getBaycNfts, Nft } from '~/lib/alchemy';
 
 export async function getServerSideProps() {
 	const queryClient = new QueryClient({
@@ -43,8 +45,10 @@ export async function getServerSideProps() {
 }
 
 const Index = ({ queryArgs }: { queryArgs: AlchemyApiArgs }) => {
+	const [filterKey, setFilterKey] = useState<string | undefined>(undefined);
+	const debouncedFilterKey = useDebounce(filterKey, 300);
 	const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
-		useNftGallery(queryArgs);
+		useNftGallery({ filterKey: debouncedFilterKey, ...queryArgs });
 
 	const nfts = data?.pages.reduce<Nft[]>(
 		(result, page) => result.concat(page.nfts),
@@ -61,6 +65,9 @@ const Index = ({ queryArgs }: { queryArgs: AlchemyApiArgs }) => {
 			>
 				{nft => (nft ? <NFTCard nft={nft} /> : <Card.Loader />)}
 			</NftGalleryList>
+			<NftFilter
+				{...{ ...queryArgs, filterKey: debouncedFilterKey, setFilterKey }}
+			/>
 		</>
 	);
 };
