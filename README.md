@@ -14,10 +14,7 @@ NFT.com FE Coding Challenge: BAYC NFT Gallery
 <br />
 <div align="center">
   <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge">
-    <img src="public/images/favicon-32x32.png" alt="Logo" width="80" height="80">
-  </a>
-  <a href="https://nft-dot-com-fe-challenge.vercel.app"/>
-  <h2> Try out the live demo here.</h2>
+    <img src="images/nft-dot-com-logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">NFT Gallery</h3>
@@ -28,7 +25,7 @@ NFT.com FE Coding Challenge: BAYC NFT Gallery
     <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge">View Demo</a>
+    <a href="https://nft-dot-com-fe-challenge.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge/issues">Report Bug</a>
     ·
