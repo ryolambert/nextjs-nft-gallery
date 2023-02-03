@@ -23,9 +23,11 @@
 		"clsx": "^1.2.1",
 		"next": "^13.1.6",
 		"next-images": "^1.8.4",
+		"next-superjson-plugin": "^0.5.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-virtualized": "^9.22.3",
+		"superjson": "^1.12.2",
 		"tailwind-merge": "^1.9.0"
 	},
 	"devDependencies": {
