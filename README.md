@@ -16,6 +16,9 @@ NFT.com FE Coding Challenge: BAYC NFT Gallery
   <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge">
     <img src="public/images/favicon-32x32.png" alt="Logo" width="80" height="80">
   </a>
+  <a href="https://nft-dot-com-fe-challenge.vercel.app"/>
+  <h2> Try out the live demo here.</h2>
+  </a>
 
 <h3 align="center">NFT Gallery</h3>
 
@@ -63,6 +66,8 @@ NFT.com FE Coding Challenge: BAYC NFT Gallery
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+[![Product Name Screen Shot][product-screenshot]](https://nft-dot-com-fe-challenge.vercel.app/)
+
 Challenge: Build a NFT gallery using alchemy NFT API for BAYC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,11 +77,11 @@ Challenge: Build a NFT gallery using alchemy NFT API for BAYC
 <!-- FEATURES -->
 ## Features
 
-- [ ] The component should fetch the NFTs for the BAYC collection
-- [ ] The NFT image and name should be shown on the card
-- [ ] The gallery should be responsive
-- [ ] The gallery should have a filter for tokenId
-- [ ] The gallery should have auto-pagination when user scrolls to the bottom using [react virtualized](https://github.com/bvaughn/react-virtualized)
+- [x] The component should fetch the NFTs for the BAYC collection
+- [x] The NFT image and name should be shown on the card
+- [x] The gallery should be responsive
+- [x] The gallery should have a filter for tokenId
+- [x] The gallery should have auto-pagination when user scrolls to the bottom using [react virtualized](https://github.com/bvaughn/react-virtualized)
 
 See the [open issues](https://github.com/ryolambert/nft-dot-com-fe-challenge/issues) for a full list of proposed features (and known issues).
 
@@ -87,9 +92,15 @@ See the [open issues](https://github.com/ryolambert/nft-dot-com-fe-challenge/iss
 ### Built With
 
 * [![Typescript][Typescript.ts]][Typescript-url]
-* [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Tailwind][TailwindCSS]][Tailwind-url]
+* [![Next][Next.js]][Next-url]
+  * Uses SSR rendering for backend api connections to the `alchemy sdk`.
+  * Images are prefetched on the server and are both cached (5 min TTL) and optimized as webp files.
+  * Custom data fetching hook `useNftGallery` using SSR hydrated client and server instances of `@tanstack/react-query`
+* ***React-Virtualized*** Setup basic infinite gallery list that is able to fetch pages of nfts in increments of 100.
+* Added a debouced filter component that also uses the same custom data hook to fetch exactly 1 matching NFT to the input and display in the gallery list.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,9 +108,6 @@ See the [open issues](https://github.com/ryolambert/nft-dot-com-fe-challenge/iss
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -156,7 +164,7 @@ Project Link: [https://github.com/ryolambert/nft-dot-com-fe-challenge](https://g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/app-screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
