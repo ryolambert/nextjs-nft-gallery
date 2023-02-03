@@ -22,8 +22,8 @@ const Logo: React.FC<React.SVGProps<any>> = props => {
 					y2='38.261'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='#FDCC00'></stop>
-					<stop offset='1' stop-color='#FF9D39'></stop>
+					<stop stopColor='#FDCC00'></stop>
+					<stop offset='1' stopColor='#FF9D39'></stop>
 				</linearGradient>
 			</defs>
 		</svg>
