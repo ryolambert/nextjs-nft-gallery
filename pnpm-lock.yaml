@@ -33,6 +33,7 @@ specifiers:
   lint-staged: ^13.1.0
   next: ^13.1.6
   next-images: ^1.8.4
+  next-superjson-plugin: ^0.5.4
   npm-run-all: ^4.1.5
   postcss: ^8.4.21
   prettier: ^2.8.3
@@ -41,6 +42,7 @@ specifiers:
   react-dom: ^18.2.0
   react-virtualized: ^9.22.3
   rimraf: ^4.1.2
+  superjson: ^1.12.2
   tailwind-merge: ^1.9.0
   tailwind-scrollbar: ^2.1.0
   tailwindcss: ^3.2.4
@@ -56,9 +58,11 @@ dependencies:
   clsx: 1.2.1
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   next-images: 1.8.4
+  next-superjson-plugin: 0.5.4_6hb7bebdisxcpyppymkqpiq3a4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-virtualized: 9.22.3_biqbaboplfbrettd7655fr4n2y
+  superjson: 1.12.2
   tailwind-merge: 1.9.0
 
 devDependencies:
@@ -3210,6 +3214,15 @@ packages:
       minimalistic-crypto-utils: 1.0.1
     dev: false
 
+  /hoist-non-react-statics/3.3.2:
+    resolution:
+      {
+        integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+      }
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+
   /hosted-git-info/2.8.9:
     resolution:
       {
@@ -4011,6 +4024,20 @@ packages:
     dependencies:
       file-loader: 6.2.0
       url-loader: 4.1.1_file-loader@6.2.0
+    dev: false
+
+  /next-superjson-plugin/0.5.4_6hb7bebdisxcpyppymkqpiq3a4:
+    resolution:
+      {
+        integrity: sha512-AUAqdL+yv/jqnkd583jffimRYbfbztkKkNf7qv0WhOVUGW0cIFYdtQHbOEseeCHK95hcPy7rDZY94nujjjRseQ==
+      }
+    peerDependencies:
+      next: ^13
+      superjson: ^1
+    dependencies:
+      hoist-non-react-statics: 3.3.2
+      next: 13.1.6_biqbaboplfbrettd7655fr4n2y
+      superjson: 1.12.2
     dev: false
 
   /next-tick/1.1.0:
