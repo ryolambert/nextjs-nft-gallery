@@ -1,0 +1,90 @@
+{
+	"extends": [
+		"airbnb-base",
+		"next/core-web-vitals",
+		"plugin:prettier/recommended"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"singleQuote": true,
+				"endOfLine": "auto"
+			}
+		]
+	},
+	"overrides": [
+		{
+			"files": ["**/*.ts", "**/*.tsx"],
+			"plugins": [
+				"@typescript-eslint",
+				"unused-imports",
+				"tailwindcss",
+				"simple-import-sort"
+			],
+			"extends": [
+				"plugin:tailwindcss/recommended",
+				"airbnb-typescript",
+				"next/core-web-vitals",
+				"plugin:prettier/recommended"
+			],
+			"parserOptions": {
+				"project": "./tsconfig.json"
+			},
+			"rules": {
+				"@typescript-eslint/comma-dangle": "off",
+				"@typescript-eslint/consistent-type-imports": "off",
+				"@typescript-eslint/no-unused-vars": "off",
+				"import/no-anonymous-default-export": "off",
+				"import/prefer-default-export": "off",
+				"prettier/prettier": [
+					"error",
+					{
+						"endOfLine": "auto",
+						"singleQuote": true
+					}
+				],
+				"react-hooks/exhaustive-deps": "off",
+				"react/destructuring-assignment": "off",
+				"react/jsx-props-no-spreading": "off",
+				"react/require-default-props": "off",
+				"simple-import-sort/exports": "error",
+				"simple-import-sort/imports": [
+					"error",
+					{
+						"groups": [
+							// Packages `react` related packages come first.
+							["^react", "^@?\\w"],
+							// Side effect imports.
+							["^\\u0000"],
+							// Internal packages.
+							["^(~|pages|components|context|lib|config|hooks|layouts)(/.*|$)"],
+							["^(~|types)(/.*|$)"],
+							["^(~|public|icons|logos|styles)(/.*|$)"],
+							// Parent imports. Put `..` last.
+							["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+							// Other relative imports. Put same-folder imports and `.` last.
+							["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+							// Style imports.
+							["^.+\\.?(css|scss)$"]
+						]
+					}
+				],
+				"unused-imports/no-unused-imports": "error",
+				"unused-imports/no-unused-vars": [
+					"error",
+					{
+						"argsIgnorePattern": "^_"
+					}
+				]
+			}
+		},
+		{
+			"files": ["*.config.js"],
+			"rules": {
+				"global-require": "off",
+				"import/no-extraneous-dependencies": "off"
+			}
+		}
+	]
+}
