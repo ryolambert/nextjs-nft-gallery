@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge';
  * @returns A string of all the class names that are truthy.
  */
 export const cl = (...inputs: ClassValue[]) => {
-	return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs));
 };
 
 /**
@@ -21,7 +21,7 @@ export const cl = (...inputs: ClassValue[]) => {
  */
 
 export function getMaxNftsPerRow(rowWidth: number, nftWidth: number) {
-	return Math.max(Math.floor(rowWidth / nftWidth), 1);
+  return Math.max(Math.floor(rowWidth / nftWidth), 1);
 }
 
 /**
@@ -32,24 +32,24 @@ export function getMaxNftsPerRow(rowWidth: number, nftWidth: number) {
  * @param nftsAmount The total amount of nfts
  */
 export function createRowIndices(
-	rowIndex: number,
-	rowWidth: number,
-	nftWidth: number,
-	nftsAmount: number
+  rowIndex: number,
+  rowWidth: number,
+  nftWidth: number,
+  nftsAmount: number
 ) {
-	const result = [];
-	const maxNftsPerRow = getMaxNftsPerRow(rowWidth, nftWidth);
-	const startIndex = rowIndex * maxNftsPerRow;
+  const result = [];
+  const maxNftsPerRow = getMaxNftsPerRow(rowWidth, nftWidth);
+  const startIndex = rowIndex * maxNftsPerRow;
 
-	for (
-		let i = startIndex;
-		i < Math.min(startIndex + maxNftsPerRow, nftsAmount);
-		i += 1
-	) {
-		result.push(i);
-	}
+  for (
+    let i = startIndex;
+    i < Math.min(startIndex + maxNftsPerRow, nftsAmount);
+    i += 1
+  ) {
+    result.push(i);
+  }
 
-	return result;
+  return result;
 }
 
 /**
@@ -61,12 +61,12 @@ export function createRowIndices(
  * @returns The amount of rows needed to display a number of NFTs.
  */
 export function getRowQuantity(
-	rowWidth: number,
-	nftWidth: number,
-	nftsAmount: number,
-	hasMore: boolean
+  rowWidth: number,
+  nftWidth: number,
+  nftsAmount: number,
+  hasMore: boolean
 ) {
-	const maxNftsPerRow = getMaxNftsPerRow(rowWidth, nftWidth);
+  const maxNftsPerRow = getMaxNftsPerRow(rowWidth, nftWidth);
 
-	return Math.ceil(nftsAmount / maxNftsPerRow) + (hasMore ? 1 : 0);
+  return Math.ceil(nftsAmount / maxNftsPerRow) + (hasMore ? 1 : 0);
 }

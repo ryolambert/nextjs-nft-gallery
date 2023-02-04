@@ -1,8 +1,8 @@
 import { Alchemy, Network } from 'alchemy-sdk';
 
 export interface AlchemyApiArgs {
-	apiKey: string;
-	contractAddress: string;
+  apiKey: string;
+  contractAddress: string;
 }
 
 export type { Nft } from 'alchemy-sdk';
@@ -16,19 +16,19 @@ export type { Nft } from 'alchemy-sdk';
  * @returns {Promise<NftContractNftsResponse>} - the NFTs for the given contract
  */
 export const getBaycNfts = async ({
-	apiKey,
-	contractAddress,
-	pageKey,
-	pageSize
+  apiKey,
+  contractAddress,
+  pageKey,
+  pageSize
 }: {
-	apiKey: string;
-	contractAddress: string;
-	pageKey?: string;
-	pageSize?: number;
+  apiKey: string;
+  contractAddress: string;
+  pageKey?: string;
+  pageSize?: number;
 }) => {
-	const alchemy = new Alchemy({ apiKey, network: Network.ETH_MAINNET });
-	return alchemy.nft.getNftsForContract(contractAddress, {
-		pageSize,
-		pageKey
-	});
+  const alchemy = new Alchemy({ apiKey, network: Network.ETH_MAINNET });
+  return alchemy.nft.getNftsForContract(contractAddress, {
+    pageSize,
+    pageKey
+  });
 };
