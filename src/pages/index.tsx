@@ -50,6 +50,7 @@ const Index = ({ queryArgs }: { queryArgs: AlchemyApiArgs }) => {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useNftGallery({ filterKey: debouncedFilterKey, ...queryArgs });
 
+  // Appends page data together
   const nfts = data?.pages.reduce<Nft[]>(
     (result, page) => result.concat(page.nfts),
     []

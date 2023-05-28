@@ -3,33 +3,31 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 /**
- * cl() is a util that concatenates class names together.
- *
- * @param inputs Any number of class names, objects, and arrays of class names.
- * @returns A string of all the class names that are truthy.
+ * Takes in a list of class values and merges them into a single class string.
+ * @param {ClassValue[]} inputs - the list of class values to merge
+ * @returns {string} the merged class string
  */
 export const cl = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 };
 
 /**
- * Calculate the maximum number of NFTs that can fit in a row of a given width,
- * given the width of each NFT.
- *
- * @param rowWidth - The width of the row, in pixels.
- * @param nftWidth - The width of each NFT, in pixels.
+ * Gets the maximum number of NFTs that can fit in a row.
+ * @param {number} rowWidth - the width of the row in pixels
+ * @param {number} nftWidth - the width of the NFT in pixels
+ * @returns {number} the maximum number of NFTs that can fit in a row.
  */
-
 export function getMaxNftsPerRow(rowWidth: number, nftWidth: number) {
   return Math.max(Math.floor(rowWidth / nftWidth), 1);
 }
 
 /**
- * Generates the indexes for the nft cards in a given row.
- * @param rowIndex The index of the row
- * @param rowWidth The width of the row
- * @param nftWidth The width of the nft cards
- * @param nftsAmount The total amount of nfts
+ * Creates an array of indices for the nfts in a row.
+ * @param {number} rowIndex - the index of the row.
+ * @param {number} rowWidth - the width of the row.
+ * @param {number} nftWidth - the width of the nft.
+ * @param {number} nftsAmount - the total amount of nfts.
+ * @returns {number[]} - the array of indices for the nfts in a row.
  */
 export function createRowIndices(
   rowIndex: number,
@@ -53,12 +51,12 @@ export function createRowIndices(
 }
 
 /**
- * Returns the amount of rows needed to display a number of NFTs.
- * @param rowWidth The width of the row in pixels.
- * @param nftWidth The width of the NFT in pixels.
- * @param nftsAmount The number of NFTs to display.
- * @param hasMore Whether or not more NFTs will be added to the row.
- * @returns The amount of rows needed to display a number of NFTs.
+ * Get the number of rows needed to display the given amount of NFTs.
+ * @param {number} rowWidth - the width of the row in pixels.
+ * @param {number} nftWidth - the width of the NFT in pixels.
+ * @param {number} nftsAmount - the number of NFTs to display.
+ * @param {boolean} hasMore - whether or not there are more NFTs than can fit on a row.
+ * @returns {number} the number of rows needed to display the given amount of NFTs.
  */
 export function getRowQuantity(
   rowWidth: number,

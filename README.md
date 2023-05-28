@@ -1,6 +1,5 @@
-# NFT.com FE Hiring Challenge #2 - Ryo Lambert
-NFT.com FE Coding Challenge: BAYC NFT Gallery
-
+# Next.js NFT Gallery  - Ryo Lambert
+BAYC NFT Gallery using Alchemy Ethereum API, React-Virtualized, Next.js 13, Tailwind, & Typescript.
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -13,23 +12,23 @@ NFT.com FE Coding Challenge: BAYC NFT Gallery
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge">
-    <img src="images/nft-dot-com-logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/ryolambert/nextjs-nft-gallery">
+    <img src="images/nft-dot-com-logo.png" alt="Logo" width="80" heiwwwght="80">
   </a>
 
-<h3 align="center">NFT Gallery</h3>
+<h3 align="center">Next.js NFT Gallery</h3>
 
   <p align="center">
-    project_description
+    Super slick, NFT gallery using Next 13's new image component and custom serverless image loader for blazing fast optimized images.
     <br />
-    <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ryolambert/nextjs-nft-gallery"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://nft-dot-com-fe-challenge.vercel.app">View Demo</a>
+    <a href="https://nextjs-nft-gallery.vercel.app">View Demo</a>
     ·
-    <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge/issues">Report Bug</a>
+    <a href="https://github.com/ryolambert/nextjs-nft-gallery/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ryolambert/nft-dot-com-fe-challenge/issues">Request Feature</a>
+    <a href="https://github.com/ryolambert/nextjs-nft-gallery/issues">Request Feature</a>
   </p>
 </div>
 
@@ -63,9 +62,9 @@ NFT.com FE Coding Challenge: BAYC NFT Gallery
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://nft-dot-com-fe-challenge.vercel.app/)
+[![Product Name Screen Shot][product-screenshot]](https://nextjs-nft-gallery.vercel.app/)
 
-Challenge: Build a NFT gallery using alchemy NFT API for BAYC
+Goal: Building an optimized/cached/searchable Next.js nft gallery with responsive cards using the Alchemy API to fetch the BAYC NFT collection data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,16 +73,15 @@ Challenge: Build a NFT gallery using alchemy NFT API for BAYC
 <!-- FEATURES -->
 ## Features
 
-- [x] The component should fetch the NFTs for the BAYC collection
-- [x] The NFT image and name should be shown on the card
-- [x] The gallery should be responsive
-- [x] The gallery should have a filter for tokenId
-- [x] The gallery should have auto-pagination when user scrolls to the bottom using [react virtualized](https://github.com/bvaughn/react-virtualized)
+- [x] Fetches BAYC collection from Alchemy API
+- [x] NFT Cards should show name, tokenId, collection, and token address.
+- [x] Gallery is responsive based on screen size.
+- [x] Gallery has tokenId search/filtering.
+- [x] Gallery implements infinite scroll.
 
-See the [open issues](https://github.com/ryolambert/nft-dot-com-fe-challenge/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ryolambert/nextjs-nft-gallery/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -119,7 +117,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/ryolambert/nft-dot-com-fe-challenge.git
+   git clone https://github.com/ryolambert/nextjs-nft-gallery.git
    ```
 3. Install NPM packages
    ```sh
@@ -153,7 +151,7 @@ This is an example of how to list things you need to use the software and how to
 
 Ryo Lambert - [@twitter_handle](https://twitter.com/twitter_handle) - hi@ryo.dev
 
-Project Link: [https://github.com/ryolambert/nft-dot-com-fe-challenge](https://github.com/ryolambert/nft-dot-com-fe-challenge)
+Project Link: [https://github.com/ryolambert/nextjs-nft-gallery](https://github.com/ryolambert/nextjs-nft-gallery)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,4 +164,5 @@ Project Link: [https://github.com/ryolambert/nft-dot-com-fe-challenge](https://g
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Tailwind]
+[TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Typescript.ts]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white

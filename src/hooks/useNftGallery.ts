@@ -12,6 +12,12 @@ interface UseGalleryArgs extends AlchemyApiArgs {
   filterKey?: string;
 }
 
+/**
+ * A hook that returns a query for the NFTs in the NFT gallery.
+ * @param {UseGalleryArgs} args - The arguments for the hook.
+ * @param {UseInfiniteQueryOptions<NftContractNftsResponse>} [options] - The options for the hook.
+ * @returns A query for the NFTs in the NFT gallery.
+ */
 const useNftGallery = (
   { apiKey, contractAddress, filterKey }: UseGalleryArgs,
   options?: UseInfiniteQueryOptions<NftContractNftsResponse>

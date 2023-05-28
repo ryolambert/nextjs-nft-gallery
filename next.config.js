@@ -13,7 +13,7 @@ module.exports = withImages({
   images: {
     domains: ['nft-cdn.alchemy.com'],
     formats: ['image/webp'],
-    minimumCacheTTL: 600,
+    minimumCacheTTL: 31556952, // 1yr in secs
     remotePatterns: [
       {
         protocol: 'https',
