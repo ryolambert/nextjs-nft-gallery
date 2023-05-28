@@ -94,7 +94,7 @@ See the [open issues](https://github.com/ryolambert/nextjs-nft-gallery/issues) f
   * Images are prefetched on the server and are both cached (5 min TTL) and optimized as webp files.
   * Custom data fetching hook `useNftGallery` using SSR hydrated client and server instances of `@tanstack/react-query`
 * ***React-Virtualized*** Setup basic infinite gallery list that is able to fetch pages of nfts in increments of 100.
-* Added a debouced filter component that also uses the same custom data hook to fetch exactly 1 matching NFT to the input and display in the gallery list.
+* Added a debounced filter component that also uses the same custom data hook to fetch exactly 1 matching NFT to the input and display in the gallery list.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -165,4 +165,6 @@ Project Link: [https://github.com/ryolambert/nextjs-nft-gallery](https://github.
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
 [Typescript.ts]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org/
